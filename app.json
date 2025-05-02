@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Expo Authentication SDK 52",
-    "slug": "ExpoAuthSDK52",
+    "name": "Expo Authentication SDK 53",
+    "slug": "ExpoAuthSDK53",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,7 +13,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.example.ExpoAuthSDK52",
+      "bundleIdentifier": "com.example.ExpoAuthSDK53",
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
@@ -30,7 +30,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.example.ExpoAuthSDK52"
+      "package": "com.example.ExpoAuthSDK53"
     },
     "plugins": [
       [
@@ -40,7 +40,8 @@
         }
       ],
       [
-        "expo-splash-screen", {
+        "expo-splash-screen",
+        {
           "backgroundColor": "#ffffff",
           "image": "./assets/splash-icon.png",
           "dark": {
@@ -54,10 +55,13 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/SpaceMono-Regular.ttf"]
+          "fonts": [
+            "./assets/fonts/SpaceMono-Regular.ttf"
+          ]
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true

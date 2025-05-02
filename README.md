@@ -1,18 +1,18 @@
-# Expo Authentication Template SDK 52
+# Expo Authentication Template SDK 53
 
 **Expo** Basic Authentication Template using **Context Provider** & `expo-secure-store` to persist user on the device.
 
-> **Note:** This app is using the **Expo SDK 52**, **React Native 0.76** with the **New Architecture**
+> **Note:** This app is using the **Expo SDK 53**, **React Native v0.79**, **React v19**, **Expo Router v5.0.0** with the **New Architecture**
 
 ![app](/assets/images/App%20Showcase.png)
 
 ## How to get the project?
 
-    git clone https://github.com/budzHors7/Expo-Authentication-SDK-52.git
+    git clone https://github.com/budzHors7/Expo-Authentication-SDK-53.git
 
 ### Open project directory
 
-    cd Expo-Authentication-SDK-52
+    cd Expo-Authentication-SDK-53
 
 ### Install node_modules
 
