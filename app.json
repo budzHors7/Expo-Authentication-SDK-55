@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Expo Authentication SDK 53",
-    "slug": "ExpoAuthSDK53",
+    "name": "Expo Authentication SDK 54",
+    "slug": "ExpoAuthSDK54",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,7 +13,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.example.ExpoAuthSDK53",
+      "bundleIdentifier": "com.example.ExpoAuthSDK54",
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
@@ -30,7 +30,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.example.ExpoAuthSDK53"
+      "package": "com.example.ExpoAuthSDK54"
     },
     "plugins": [
       [
@@ -43,9 +43,9 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#ffffff",
-          "image": "./assets/splash-icon.png",
+          "image": "./assets/images/splash-icon.png",
           "dark": {
-            "image": "./assets/splash-icon.png",
+            "image": "./assets/images/splash-icon.png",
             "backgroundColor": "#000000"
           },
           "imageWidth": 200,
@@ -61,10 +61,19 @@
         }
       ],
       "expo-secure-store",
-      "expo-web-browser"
+      "expo-web-browser",
+      "react-native-bottom-tabs"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "http://example.com/"
+      },
+      "eas": {
+        "projectId": "5e4ca5ee-c905-4fa9-9188-b22b455376ae"
+      }
     }
   }
 }

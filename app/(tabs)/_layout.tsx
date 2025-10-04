@@ -1,9 +1,10 @@
-import { Redirect, Tabs } from 'expo-router';
-import { View } from 'react-native';
+import { Redirect } from 'expo-router';
+import { NativeTabs, Icon, Label, Badge, VectorIcon } from 'expo-router/unstable-native-tabs';
 import { useSession } from '@/context/Authentication';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@react-navigation/native';
 import AuthCheck from '@/components/AuthCheck';
+import { Ionicons } from '@expo/vector-icons';
+import { Platform } from 'react-native';
 
 export default function TabLayout() {
   const { session, isLoading } = useSession();
@@ -18,38 +19,35 @@ export default function TabLayout() {
   }
 
   return (
-    <Tabs
+    <NativeTabs
       backBehavior='none'
-      screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
-        tabBarActiveTintColor: colors.primary,
-        tabBarStyle: {
-          backgroundColor: colors.background
-        }
-      }}
+      badgeTextColor="#ff0000ff"
+      backgroundColor={Platform.OS === "android" ? colors.background : null}
+      blurEffect="systemDefault"
+      minimizeBehavior="onScrollDown"
     >
-      <Tabs.Screen
-        name="home"
-        options={{
-          tabBarIcon: ({ color, focused}) => (
-            <View className="items-center justify-center">
-              <Ionicons name={focused ? "home-sharp"  : "home-outline"} size={24} color={focused ? color : "gray"} />
-            </View>
-          )
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          tabBarBadge: "2",
-          tabBarIcon: ({ color, focused}) => (
-            <View className="items-center justify-center">
-              <Ionicons name={focused ? "person-sharp"  : "person-outline"} size={24} color={focused ? color : "gray"} />
-            </View>
-          )
-        }}
-      />
-    </Tabs>
+      <NativeTabs.Trigger name="home">
+        <Label>Home</Label>
+        {Platform.select({
+          ios: <Icon sf={{default: "house", selected: "house.fill"}} />,
+          android: <Icon src={<VectorIcon family={Ionicons} name="home-outline" />} />,
+        })}
+      </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="profile">
+        <Label>Profile</Label>
+        <Icon drawable="sym_contact_card" sf={{default: "person", selected: "person.fill"}} />
+        <Badge>0</Badge>
+      </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="profile" role="search">
+        <Badge>0</Badge>
+        <Label>Profile</Label>
+        {Platform.select({
+          ios: <Icon sf={{default: "person", selected: "person.fill"}} />,
+          android: <Icon src={<VectorIcon family={Ionicons} name="person-outline" />} />,
+        })}
+      </NativeTabs.Trigger>
+    </NativeTabs>
   );
 }
