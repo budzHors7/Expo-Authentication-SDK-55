@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Expo Authentication SDK 54",
-    "slug": "ExpoAuthSDK54",
+    "name": "Expo Authentication",
+    "slug": "ExpoAuth",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,7 +13,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.example.ExpoAuthSDK54",
+      "bundleIdentifier": "com.example.ExpoAuth",
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
@@ -30,9 +30,22 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.example.ExpoAuthSDK54"
+      "package": "com.example.ExpoAuth"
     },
     "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0"
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
       [
         "expo-router",
         {
@@ -68,7 +81,8 @@
           "useProxyActivity": true
         }
       ],
-      "react-native-bottom-tabs"
+      "react-native-bottom-tabs",
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true

@@ -18,6 +18,7 @@
     "@expo/vector-icons": "^15.0.3",
     "@react-navigation/native": "^7.1.6",
     "expo": "^55.0.0-canary-20251216-3f01dbf",
+    "expo-build-properties": "1.0.11-canary-20251216-3f01dbf",
     "expo-dev-client": "6.1.0-canary-20251216-3f01dbf",
     "expo-font": "14.1.0-canary-20251216-3f01dbf",
     "expo-linking": "8.0.11-canary-20251216-3f01dbf",
