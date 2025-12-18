@@ -21,8 +21,8 @@ export default function TabLayout() {
   return (
     <NativeTabs
       backBehavior='none'
-      badgeTextColor="#ff0000ff"
-      backgroundColor={Platform.OS === "android" ? colors.background : null}
+      badgeTextColor={colors.text}
+      // backgroundColor={Platform.OS === "android" ? colors.background : null}
       blurEffect="systemDefault"
       minimizeBehavior="onScrollDown"
     >
@@ -30,23 +30,23 @@ export default function TabLayout() {
         <Label>Home</Label>
         {Platform.select({
           ios: <Icon sf={{default: "house", selected: "house.fill"}} />,
-          android: <Icon src={<VectorIcon family={Ionicons} name="home-outline" />} />,
+          android: <Icon src={{
+            default: <VectorIcon family={Ionicons} name="home-outline" />,
+            selected: <VectorIcon family={Ionicons} name="home-sharp" />
+          }} />
         })}
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="profile">
         <Label>Profile</Label>
-        <Icon drawable="sym_contact_card" sf={{default: "person", selected: "person.fill"}} />
-        <Badge>0</Badge>
-      </NativeTabs.Trigger>
-
-      <NativeTabs.Trigger name="profile" role="search">
-        <Badge>0</Badge>
-        <Label>Profile</Label>
         {Platform.select({
           ios: <Icon sf={{default: "person", selected: "person.fill"}} />,
-          android: <Icon src={<VectorIcon family={Ionicons} name="person-outline" />} />,
+          android: <Icon src={{
+            default: <VectorIcon family={Ionicons} name="person-outline" />,
+            selected: <VectorIcon family={Ionicons} name="person-sharp" />
+          }} />
         })}
+        <Badge>1</Badge>
       </NativeTabs.Trigger>
     </NativeTabs>
   );

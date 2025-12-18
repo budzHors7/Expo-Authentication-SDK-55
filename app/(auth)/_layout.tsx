@@ -1,4 +1,3 @@
-import React from "react"
 import { Redirect, Stack } from "expo-router"
 import { useSession } from "@/context/Authentication";
 import AuthCheck from "@/components/AuthCheck";

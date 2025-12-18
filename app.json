@@ -36,7 +36,7 @@
       [
         "expo-router",
         {
-          "origin": "http://example.com/"
+          "origin": "https://example.com/"
         }
       ],
       [
@@ -61,7 +61,13 @@
         }
       ],
       "expo-secure-store",
-      "expo-web-browser",
+      [
+        "expo-web-browser",
+        {
+          "createTask": true,
+          "useProxyActivity": true
+        }
+      ],
       "react-native-bottom-tabs"
     ],
     "experiments": {
